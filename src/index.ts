@@ -1,6 +1,8 @@
-import { registerPlugin } from '@capacitor/core';
+import { registerPlugin, registerWebPlugin } from '@capacitor/core';
 
 import type { RateAppPlugin } from './definitions';
+
+registerWebPlugin.
 
 const RateApp = registerPlugin<RateAppPlugin>('RateApp', {
   web: () => import('./web').then(m => new m.RateAppWeb()),
