@@ -1,9 +1,28 @@
 import { WebPlugin } from '@capacitor/core';
+import { MapslyAppRatePlugin } from './definitions';
 
-import type { RateAppPlugin } from './definitions';
+export class MapslyAppRateWeb extends WebPlugin implements MapslyAppRatePlugin {
+  constructor() {
+    super({
+      name: 'MapslyAppRate',
+      platforms: ['web'],
+    });
+  }
 
-export class RateAppWeb extends WebPlugin implements RateAppPlugin {
-  async requestReview(): Promise<void> {
-    return;
+  async echo(options: { value: string }): Promise<{ value: string }> {
+    console.log('ECHO', options);
+    return options;
+  }
+
+  async requestReview(options: { value: string }): Promise<{ value: string }> {
+    console.log('requestReview', options);
+    return options;
   }
 }
+
+const MapslyAppRate = new MapslyAppRateWeb();
+
+export { MapslyAppRate };
+
+import { registerWebPlugin } from '@capacitor/core';
+registerWebPlugin(MapslyAppRate);
