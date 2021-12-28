@@ -6,4 +6,5 @@ declare module '@capacitor/core' {
 
 export interface MapslyAppRatePlugin {
   echo(options: { value: string }): Promise<{ value: string }>;
+  requestReview(options: { value: string }): Promise<{ value: string }>;
 }
