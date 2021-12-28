@@ -2,9 +2,17 @@
   "name": "capacitor-rate-app",
   "version": "2.0.0",
   "description": "Let users rate your app using native rate app dialog for both Android and iOS.",
-  "main": "dist/plugin.js",
+  "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
+  "unpkg": "dist/plugin.js",
+  "files": [
+    "android/src/main/",
+    "android/build.gradle",
+    "dist/",
+    "ios/Plugin/",
+    "CapacitorRateApp.podspec"
+  ],
   "author": "Daniel Suchy",
   "license": "MIT",
   "repository": {
@@ -52,12 +60,6 @@
   "peerDependencies": {
     "@capacitor/core": "^2.4.7"
   },
-  "files": [
-    "dist/",
-    "ios/",
-    "android/",
-    "CapacitorMapslyAppRate.podspec"
-  ],
   "prettier": "@ionic/prettier-config",
   "swiftlint": "@ionic/swiftlint-config",
   "eslintConfig": {
