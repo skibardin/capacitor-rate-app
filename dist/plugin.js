@@ -9,11 +9,11 @@ var capacitorCapacitorRateApp = (function (exports, core) {
             });
         }
         async echo(options) {
-            console.log('ECHO', options);
+            console.log('ECHO in WEB', options);
             return options;
         }
         async requestReview(options) {
-            console.log('requestReview', options);
+            console.log('requestReview in WEB', options);
             return options;
         }
     }
