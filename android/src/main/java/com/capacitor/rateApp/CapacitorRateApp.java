@@ -1,4 +1,4 @@
-package com.capacitor.rateapp;
+package com.capacitor.rateApp;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
-import com.getcapacitor.annotation.CapacitorPlugin;
 import com.google.android.play.core.review.ReviewInfo;
 import com.google.android.play.core.review.ReviewManager;
 import com.google.android.play.core.review.ReviewManagerFactory;
