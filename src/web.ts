@@ -10,12 +10,12 @@ export class MapslyAppRateWeb extends WebPlugin implements MapslyAppRatePlugin {
   }
 
   async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
+    console.log('ECHO in WEB', options);
     return options;
   }
 
   async requestReview(options: { value: string }): Promise<{ value: string }> {
-    console.log('requestReview', options);
+    console.log('requestReview in WEB', options);
     return options;
   }
 }
